@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh """
-		pwd
-		docker build -f Dockerfile -t testimage -
-		"""
+                 sh 'docker build -t test/jenkins-docker-hub .'
             }
         }
          stage('test') {
