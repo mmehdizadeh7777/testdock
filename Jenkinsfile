@@ -22,6 +22,17 @@ pipeline {
         sh 'docker push mmehdizadeh7777/jenkins-docker-hub'
       }
     }
+    stage ('Pull') {
+      steps {
+	sh 'docker pull mmehdizadeh7777/jenkins-docker-hub'
+      }
+   }
+   
+   stage ('Run') {
+	steps {
+	  sh 'docker run -it mmehdizadeh7777/jenkins-docker-hub'
+      }
+   }
   }
   post {
     always {
