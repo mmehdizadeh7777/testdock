@@ -30,7 +30,7 @@ pipeline {
    
    stage ('Run') {
 	steps {
-	  sh 'docker run -it mmehdizadeh7777/jenkins-docker-hub'
+	  sh 'docker run -i mmehdizadeh7777/jenkins-docker-hub'
       }
    }
   }
