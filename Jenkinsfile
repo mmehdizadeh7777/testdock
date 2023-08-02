@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "docker build -t testimage -"
+                sh """
+		pwd
+		docker build -f Dockerfile -t testimage -
+		"""
             }
         }
          stage('test') {
